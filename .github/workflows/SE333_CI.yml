@@ -25,7 +25,7 @@ jobs:
         run: mvn checkstyle:checkstyle --no-transfer-progress
 
       - name: Upload Checkstyle Result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: checkstyle-report
           path: target/checkstyle-result.xml
@@ -39,7 +39,7 @@ jobs:
           echo "JaCoCo report generated in target/site/jacoco"
 
       - name: Upload Jacoco Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
           path: target/site/jacoco
